@@ -1,1 +1,45 @@
-.DS_Store *.swp .zcompdump* .zsh_sessions/ .Trash/ .cache/ .local/ .npm/ .vscode/ # Diğer gereksiz dosyalar veya dizinler...
+# .NET Core
+bin/
+obj/
+*.user
+*.suo
+*.sln.docstates
+
+# Visual Studio
+.vs/
+.vscode/
+*.db
+*.sqlite
+*.log
+
+# diğer geçici dosyalar
+*.tmp
+*.cache
+# Visual Studio dosyaları
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET bin ve obj klasörleri
+bin/
+obj/
+
+# Diğer yaygın dosyalar
+*.DS_Store
+*.vscode/
+.env
+# Geçici dosyalar
+.DS_Store
+*.dmg
+*.iso
+
+# Kullanıcı ayarları ve cache dosyaları
+*.cache
+.idea/
+.vscode/
+*.suo
+*.user
+*.log
+.DS_Store 
+*.swp .zcompdump* .zsh_sessions/ .Trash/ .cache/ .local/ .npm/ .vscode/ 
