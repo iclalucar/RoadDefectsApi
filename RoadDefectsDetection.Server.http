@@ -1,0 +1,6 @@
+@RoadDefectsDetection.Server_HostAddress = http://localhost:5250
+
+GET {{RoadDefectsDetection.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
