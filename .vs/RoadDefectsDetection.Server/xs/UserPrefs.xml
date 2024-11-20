@@ -1,9 +1,26 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{E63FC7EE-6D31-4DAE-9428-0F7C3A5EFCD8}|https">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.RoadDefectsDetection.Server PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="RoadDefectsDetection.Server.http">
+    <Files>
+      <File FileName="Models/UserDto.cs" />
+      <File FileName="Models/RegisterDto.cs" />
+      <File FileName="Models/UserEntity.cs" />
+      <File FileName="Controllers/UserController.cs" />
+      <File FileName="Program.cs" />
+      <File FileName="appsettings.json" />
+      <File FileName="libman.json" />
+      <File FileName="RoadDefectsDetection.Server.http" Line="1" Column="65" />
+      <File FileName="WeatherForecast.cs" />
+      <File FileName="Dockerfile" />
+      <File FileName=".gitignore" />
+      <File FileName=".dockerignore" />
+      <File FileName="Properties/launchSettings.json" />
+      <File FileName="Data/DataContext.cs" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -12,5 +29,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
