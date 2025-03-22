@@ -1,7 +1,4 @@
-Tabii! İşte bu proje için bir `README.md` dosyası örneği:
-
-```markdown
-# Road Defects Detection API
+Road Defects Detection API
 
 Bu proje, yol bozukluklarını tespit etmek için bir REST API sağlar. Kullanıcılar, yol bozukluğu görüntülerini base64 formatında yükleyebilir ve bu görüntüler üzerinden RoboFlow kullanarak bozukluk tespiti yapılır. API, kullanıcı kayıt ve giriş işlemleri ile güvenli JWT token doğrulaması sağlar.
 
@@ -30,7 +27,7 @@ Bu proje, yol bozukluklarını tespit etmek için bir REST API sağlar. Kullanı
     "Password": "password123",
     "FullName": "John Doe"
   }
-  ```
+
 - **Yanıt:**
   ```json
   {
