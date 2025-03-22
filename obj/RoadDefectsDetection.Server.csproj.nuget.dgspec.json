@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/iclalucar/Desktop/workspace/roaddefectsdetectionwebapi-main/RoadDefectsDetection.Server/RoadDefectsDetection.Server.csproj": {}
+    "/Users/iclalucar/Projects/RoadDefectsApi/RoadDefectsDetection.Server.csproj": {}
   },
   "projects": {
-    "/Users/iclalucar/Desktop/workspace/roaddefectsdetectionwebapi-main/RoadDefectsDetection.Server/RoadDefectsDetection.Server.csproj": {
+    "/Users/iclalucar/Projects/RoadDefectsApi/RoadDefectsDetection.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/iclalucar/Desktop/workspace/roaddefectsdetectionwebapi-main/RoadDefectsDetection.Server/RoadDefectsDetection.Server.csproj",
+        "projectUniqueName": "/Users/iclalucar/Projects/RoadDefectsApi/RoadDefectsDetection.Server.csproj",
         "projectName": "RoadDefectsDetection.Server",
-        "projectPath": "/Users/iclalucar/Desktop/workspace/roaddefectsdetectionwebapi-main/RoadDefectsDetection.Server/RoadDefectsDetection.Server.csproj",
+        "projectPath": "/Users/iclalucar/Projects/RoadDefectsApi/RoadDefectsDetection.Server.csproj",
         "packagesPath": "/Users/iclalucar/.nuget/packages/",
-        "outputPath": "/Users/iclalucar/Desktop/workspace/roaddefectsdetectionwebapi-main/RoadDefectsDetection.Server/obj/",
+        "outputPath": "/Users/iclalucar/Projects/RoadDefectsApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/iclalucar/.nuget/NuGet/NuGet.Config"
@@ -38,6 +38,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "IdentityServer4": {
+              "target": "Package",
+              "version": "[4.1.2, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.10, )"

@@ -1,11 +1,14 @@
+using IdentityServer4.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using RoadDefectsDetection.Server.Configuration;
 using RoadDefectsDetection.Server.Data;
 using RoadDefectsDetection.Server.Models;
 using Swashbuckle.AspNetCore.Filters;
+using System.Security.Claims;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +18,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(options=>
+builder.Services.AddSwaggerGen(options =>
 {
     options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
     {
@@ -27,11 +30,7 @@ builder.Services.AddSwaggerGen(options=>
     options.OperationFilter<SecurityRequirementsOperationFilter>();
 });
 
-builder.Services.AddAuthentication(options => {
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 .AddJwtBearer(jwt => {
     var key = Encoding.ASCII.GetBytes("qweASDzxcqweASDzxcqweASDzxcqweASDzxcqweASDzxcqweASDzxcqweASDzxcqweASDzxcqweASDzxcqweASDzxc@!?");
     jwt.SaveToken = true;
@@ -42,12 +41,21 @@ builder.Services.AddAuthentication(options => {
         ValidateIssuer = false,
         ValidateAudience = false,
         RequireExpirationTime = false,
-        ValidateLifetime = true
+        ValidateLifetime = true,
+        RoleClaimType = ClaimTypes.Role
     };
 });
 
 builder.Services.AddDbContext<DataContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+builder.Services.AddIdentity<UserEntity, IdentityRole>()
+    .AddEntityFrameworkStores<DataContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.AddScoped<IProfileService, ProfileService>();
+
 
 builder.Services.AddAuthorization();
 builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
@@ -60,6 +68,7 @@ builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
 builder.Services.AddIdentityCore<UserEntity>(
   options => options.SignIn.RequireConfirmedAccount = true)
   .AddEntityFrameworkStores<DataContext>();
+
 
 var app = builder.Build();
 
